@@ -1,0 +1,15 @@
+int igual = 0;
+    for (int x = 0; x < 4; x++) {
+        if (bkg1[x][0] == bkg2[x][2] && bkg1[x][2]==bkg2[x][0] && bkg1[x][1] == bkg2[x][1])
+        {
+            igual += 1;
+        }
+    }
+    if (igual == 4)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
