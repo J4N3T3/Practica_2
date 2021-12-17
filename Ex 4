@@ -1,0 +1,71 @@
+typedef struct Weapon {
+	int id;
+	int ammo;
+	int damage;
+};
+
+--------------------------------------------------------------------------------------------------
+
+int fila1 = 0, media1, fila2 = 0, media2, fila3 = 0, media3, fila4 = 0, media4;
+	for (int i = 0; i < 3; i++)
+	{
+		fila1 += armoryCloset[0][i].damage;
+	}
+	media1 = fila1 / 3;
+	for (int i = 0; i < 3; i++)
+	{
+		fila2 += armoryCloset[1][i].damage;
+	}
+	media2 = fila2 / 3;
+	for (int i = 0; i < 3; i++)
+	{
+		fila3 += armoryCloset[2][i].damage;
+	}
+	media3 = fila3 / 3;
+	for (int i = 0; i < 3; i++)
+	{
+		fila4 += armoryCloset[3][i].damage;
+	}
+	media4 = fila4 / 3;
+	
+	if (media1 > media2 && media1 > media3 && media1 > media4) {
+		return 0;
+	}
+	if (media2 > media1 && media2 > media3 && media2 > media4) {
+		return 1;
+	}
+	if (media3 > media1 && media3 > media2 && media3 > media4) {
+		return 2;
+	}
+	if (media4 > media1 && media4 > media2 && media4 > media3) {
+		return 3;
+	}
+  
+-----------------------------------------------------------------------------------------------------------
+
+int columna1 = 0, media1, columna2 = 0, media2, columna3 = 0, media3;
+	for (int i = 0; i < 4; i++)
+	{
+		columna1 += armoryCloset[i][0].ammo;
+	}
+	media1 = columna1 / 4;
+	for (int i = 0; i < 4; i++)
+	{
+		columna2 += armoryCloset[i][1].ammo;
+	}
+	media2 = columna2 / 4;
+	for (int i = 0; i < 4; i++)
+	{
+		columna3 += armoryCloset[i][2].ammo;
+	}
+	media3 = columna3 / 4;
+	
+	if (media1 < media2 && media1 < media3) {
+		return 0;
+	}
+	if (media2 < media1 && media2 < media3) {
+		return 1;
+	}
+	if (media3 < media2 && media3 < media1) {
+		return 2;
+	}
