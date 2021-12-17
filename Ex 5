@@ -1,0 +1,12 @@
+int cont = 0;
+	char buff[100];
+	FILE* fp;
+	fopen_s(&fp, filename, "r");
+	while (feof(fp) == 0) {
+		fscanf_s(fp, "%s", buff, sizeof(buff));
+		if (strcmp(buff, word) == 0)
+		{
+			cont += 1;
+		}
+	}
+	return cont;
